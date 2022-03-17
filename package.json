@@ -1,11 +1,29 @@
 {
   "name": "botc-stats",
   "version": "0.1.0",
+  "description": "Game tracking and statistics for the Blood on the Clocktower game.",
+  "homepage": "https://github.com/hikeeba/botc-stats",
+  "bugs": "https://github.com/hikeeba/botc-stats/issues",
+  "author": "John Long",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hikeeba/botc-stats.git"
+  },
+  "keywords": [
+    "botc",
+    "stats",
+    "amplify",
+    "react",
+    "aws"
+  ],
   "private": true,
   "dependencies": {
+    "@aws-amplify/ui-react": "^2.10.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "aws-amplify": "^4.3.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
