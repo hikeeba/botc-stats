@@ -10,6 +10,14 @@
       "StackName": "amplify-botcstats-dev-214654",
       "StackId": "arn:aws:cloudformation:us-east-1:313433350927:stack/amplify-botcstats-dev-214654/2168ec70-a594-11ec-8d71-0e41eb28ac6d",
       "AmplifyAppId": "d2d5rf58axme3s"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2d5rf58axme3s",
+          "type": "manual"
+        }
+      }
     }
   }
 }
