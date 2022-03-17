@@ -2,7 +2,6 @@
   "name": "botc-stats",
   "version": "0.1.0",
   "description": "Game tracking and statistics for the Blood on the Clocktower game.",
-  "homepage": "https://github.com/hikeeba/botc-stats",
   "bugs": "https://github.com/hikeeba/botc-stats/issues",
   "author": "John Long",
   "license": "GPL-3.0-only",
