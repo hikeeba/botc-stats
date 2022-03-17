@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "botcstats",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authbotcstats22899886",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "botcstats",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/johnlong/Documents/botc-stats/amplify/backend/api/botcstats/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authbotcstats22899886"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 7,
+        "apiKeyExpirationDate": "2022-03-24T03:40:33.418Z",
+        "keyDescription": "api-key"
+      }
+    ]
+  }
+}
