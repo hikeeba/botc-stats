@@ -1,2 +1,3 @@
-# botc-stats
-Game tracking and stats for the Blood on the Clocktower game.
+# Blood on the Clocktowe Stats
+
+Game tracking and statistics for the Blood on the Clocktower game.
