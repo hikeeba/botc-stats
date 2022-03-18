@@ -8,11 +8,9 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-import SignIn from './SignIn';
+import CustomLink from './CustomLink';
 
 const MainMenu = () => {
-  const [auth, setAuth] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleMenu = (event) => {
@@ -24,61 +22,58 @@ const MainMenu = () => {
   };
 
   return (
-    <>
-      {showSignIn && (
-        <SignIn />
-      )}
-      <AppBar position="static">
-        <Toolbar>
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <CustomLink to="/">
+            Blood on the Clocktower Stats
+          </CustomLink>
+        </Typography>
+        <div>
           <IconButton
             size="large"
-            edge="start"
+            aria-label="current user account"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
             color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <AccountCircle />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Blood on the Clocktower Stats
-          </Typography>
-          <div>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenu}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              {auth && (
-                <MenuItem onClick={handleClose}>Sign Out</MenuItem>
-              )}
-              {!auth && (
-                <MenuItem onClick={handleClose}>Sign In</MenuItem>
-              )}
-            </Menu>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleClose}>
+              <CustomLink
+                to="/signin">
+                Sign In
+              </CustomLink>
+            </MenuItem>
+          </Menu>
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 };
 

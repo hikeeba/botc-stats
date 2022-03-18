@@ -1,6 +1,5 @@
+import Box from '@mui/material/Box';
 import { Authenticator, Heading, useTheme } from '@aws-amplify/ui-react';
-import CloseIcon from '@mui/icons-material/Close';
-import IconButton from '@mui/material/IconButton';
 import '@aws-amplify/ui-react/styles.css';
 
 import './SignIn.css';
@@ -16,9 +15,6 @@ const components = {
           level={3}
         >
           Sign in to your account
-          <IconButton aria-label='close sign in modal'>
-            <CloseIcon />
-          </IconButton>
         </Heading>
       );
     }
@@ -27,11 +23,12 @@ const components = {
 
 const SignIn = () => {
   return (
-    <Authenticator
-      variation="modal"
-      hideSignUp={true}
-      components={components}>
-    </Authenticator>
+    <Box sx={{ mt: 8 }}>
+      <Authenticator
+        hideSignUp={true}
+        components={components}>
+      </Authenticator>
+    </Box>
   );
 };
 
