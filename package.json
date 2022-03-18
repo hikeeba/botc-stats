@@ -14,7 +14,8 @@
     "stats",
     "amplify",
     "react",
-    "aws"
+    "aws",
+    "mui"
   ],
   "private": true,
   "dependencies": {
