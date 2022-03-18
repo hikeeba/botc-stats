@@ -2,6 +2,7 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter, Link as RouterLink, Routes, Route } from "react-router-dom";
+import { Authenticator } from '@aws-amplify/ui-react';
 
 import MainMenu from './components/MainMenu';
 import SignIn from './components/SignIn';
@@ -29,16 +30,18 @@ const theme = createTheme({
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <MainMenu />
-        <Routes>
-          <Route path="/" element={<div>home</div>} />
-          <Route path="signin" element={<SignIn />} />
-        </Routes>
-      </ThemeProvider>
-    </BrowserRouter>
+    <Authenticator.Provider>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <MainMenu />
+          <Routes>
+            <Route path="/" element={<div>home</div>} />
+            <Route path="signin" element={<SignIn />} />
+          </Routes>
+        </ThemeProvider>
+      </BrowserRouter>
+    </Authenticator.Provider>
   );
 };
 
