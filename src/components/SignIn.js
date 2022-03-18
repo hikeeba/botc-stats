@@ -31,7 +31,6 @@ const SignIn = () => {
   useEffect(() => {
     if (isAuthenticated) {
         navigate("/");
-        return (null);
     }
   }, [navigate, isAuthenticated]);
 
