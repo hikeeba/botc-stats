@@ -7,19 +7,19 @@ const titleMapping = {
 };
 
 const EnvironmentBanner = (props) => {
-  console.log(process.env);
+  const envName = process.env.REACT_APP_ENV;
 
-  if (process.env.REACT_APP_ENV === 'main') {
+  if (envName === 'main') {
     return (null);
   }
 
   let envTitle = titleMapping.unknown;
 
-  if (titleMapping.hasOwnProperty(process.env.REACT_APP_ENV)) {
-    envTitle = titleMapping[process.env.REACT_APP_ENV];
+  if (titleMapping.hasOwnProperty(envName)) {
+    envTitle = titleMapping[envName];
   }
   else {
-    envTitle = `${titleMapping[process.env.REACT_APP_ENV] (process.env.REACT_APP_ENV)}`;
+    envTitle = `${titleMapping[envName] (envName)}`;
   }
 
   return (
