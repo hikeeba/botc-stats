@@ -13,13 +13,13 @@ const EnvironmentBanner = (props) => {
     return (null);
   }
 
-  let envTitle = titleMapping.unknown;
+  let envTitle = null;
 
   if (titleMapping.hasOwnProperty(envName)) {
     envTitle = titleMapping[envName];
   }
   else {
-    envTitle = `${titleMapping[envName] (envName)}`;
+    envTitle = `${titleMapping.unknown} (${envName})`;
   }
 
   return (
