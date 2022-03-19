@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const CustomLink = ({ children, style, ...other }) => {
   if (!style) {

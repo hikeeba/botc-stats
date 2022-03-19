@@ -1,11 +1,11 @@
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { BrowserRouter, Link as RouterLink, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link as RouterLink } from 'react-router-dom';
 import { Authenticator } from '@aws-amplify/ui-react';
 
 import MainMenu from './components/MainMenu';
-import SignIn from './components/SignIn';
+import MainContent from './components/MainContent';
 
 const LinkBehavior = React.forwardRef((props, ref) => {
   const { href, ...other } = props;
@@ -23,6 +23,11 @@ const theme = createTheme({
         component: LinkBehavior,
       },
     },
+    MuiListItemButton: {
+      defaultProps: {
+        component: LinkBehavior,
+      },
+    },
     MuiButtonBase: {
       defaultProps: {
         LinkComponent: LinkBehavior,
@@ -31,17 +36,16 @@ const theme = createTheme({
   },
 });
 
+const sideMenuWidth = 240;
+
 const App = () => {
   return (
     <Authenticator.Provider>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <MainMenu />
-          <Routes>
-            <Route path="/" element={<div>home</div>} />
-            <Route path="signin" element={<SignIn />} />
-          </Routes>
+          <MainMenu sideMenuWidth={sideMenuWidth} />
+          <MainContent sideMenuWidth={sideMenuWidth} />
         </ThemeProvider>
       </BrowserRouter>
     </Authenticator.Provider>

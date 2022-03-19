@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { Authenticator, Heading, useTheme } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import useIsAuthenticated from '../hooks/useIsAuthenticated';
 import './SignIn.css';

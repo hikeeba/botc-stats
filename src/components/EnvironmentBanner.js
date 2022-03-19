@@ -25,8 +25,9 @@ const EnvironmentBanner = (props) => {
   return (
     <Alert
       severity='warning'
-      variant='filled' {...props}>
-        {envTitle} Environment
+      variant='filled'
+      {...props}>
+        {envTitle}
     </Alert>
   );
 };
