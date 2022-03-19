@@ -14,6 +14,9 @@ const LinkBehavior = React.forwardRef((props, ref) => {
 });
 
 const theme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
   components: {
     MuiLink: {
       defaultProps: {

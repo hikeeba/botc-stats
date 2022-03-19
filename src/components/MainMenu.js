@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 
 import CustomLink from './CustomLink';
 import UserMenu from './UserMenu';
+import EnvironmentBanner from './EnvironmentBanner';
 
 const MainMenu = () => {
   return (
@@ -25,6 +26,7 @@ const MainMenu = () => {
             Blood on the Clocktower Stats
           </CustomLink>
         </Typography>
+        <EnvironmentBanner />
         <UserMenu />
       </Toolbar>
     </AppBar>
