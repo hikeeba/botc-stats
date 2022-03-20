@@ -7,6 +7,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ExtensionIcon from '@mui/icons-material/Extension';
 import PersonIcon from '@mui/icons-material/Person';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 import Authenticated from './Authenticated';
 
@@ -17,11 +18,11 @@ const SideMenuDrawerItems = () => {
       <Divider />
       <List>
         <ListItem disablePadding>
-          <ListItemButton href="/sessions">
+          <ListItemButton href="/">
             <ListItemIcon>
               <ExtensionIcon />
             </ListItemIcon>
-            <ListItemText>Game Sessions</ListItemText>
+            <ListItemText>Game Plays</ListItemText>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -36,6 +37,22 @@ const SideMenuDrawerItems = () => {
       <Authenticated>
         <Divider />
         <List>
+          <ListItem disablePadding>
+            <ListItemButton href="/admin/plays">
+              <ListItemIcon>
+                <ExtensionIcon />
+              </ListItemIcon>
+              <ListItemText>Edit Game Plays</ListItemText>
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton href="/admin/players">
+              <ListItemIcon>
+                <AdminPanelSettingsIcon />
+              </ListItemIcon>
+              <ListItemText>Edit Players</ListItemText>
+            </ListItemButton>
+          </ListItem>
         </List>
       </Authenticated>
     </>

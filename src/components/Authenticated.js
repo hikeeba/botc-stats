@@ -8,7 +8,9 @@ const Authenticated = ({ children }) => {
   }
 
   return (
-    {children}
+    <>
+      {children}
+    </>
   );
 };
 
