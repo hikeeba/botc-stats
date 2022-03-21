@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Amplify } from 'aws-amplify';
+import { Amplify, AuthModeStrategyType } from 'aws-amplify';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import awsExports from './aws-exports';
 
-Amplify.configure(awsExports);
+Amplify.configure({
+  ...awsExports,
+  // see https://aws.amazon.com/blogs/mobile/aws-amplify-allows-you-to-mix-and-match-authorization-modes-in-datastore/
+  DataStore: {
+    authModeStrategyType: AuthModeStrategyType.MULTI_AUTH
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>
